@@ -81,13 +81,12 @@ Blockly.Arduino.IMU_StepCount= function() {
   + '}\n';
 var funcName='updateStepCount';
 	code= '{\n'
-  + 'if (!stepEventsEnabeled) {\n'
   + 'long stepCount = CurieIMU.getStepCount();\n'
   + ' if (stepCount != lastStepCount) {\n'
   + 'lastStepCount = stepCount;\n'
+
+  + '}\n'
   + 'return stepCount;\n'
-  + '}\n'
-  + '}\n'
   + '}\n';
 Blockly.Arduino.definitions_[funcName] ='long '+funcName+'()'+code;
 var funcName1='static void eventCallback';
